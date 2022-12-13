@@ -5,22 +5,11 @@ require('dotenv').config();
 const querystring = require('querystring');
 const axios = require('axios');
 
+//.env variables
 const CLIENT_ID = process.env.CLIENT_ID;
 const CLIENT_SECRET = process.env.CLIENT_SECRET;
 const REDIRECT_URI = process.env.REDIRECT_URI;
 
-//Express Testing - Will Delete
-app.get('/', (req, res) => {
-    const data = {
-        name: 'Brittany',
-        isAwesome: false
-    };
-    res.json(data);
-});
-app.get('/awesome-generator', (req, res) => {
-    const { name, isAwesome } = req.query;
-    res.send(`${name} is ${JSON.parse(isAwesome) ? 'really' : 'not'} awesome`);
-});
 
 /**
  * Generates a random string containing numbers and letters
@@ -107,7 +96,7 @@ app.get('/callback', (req, res) => {
         res.send(error);
     });
 });
-//
+//Call that refreshes access token using refresh token that is given.
 app.get('/refresh_token', (req, res) => {
     const { refresh_token } = req.query;
   
