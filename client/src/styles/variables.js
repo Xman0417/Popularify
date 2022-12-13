@@ -1,5 +1,5 @@
 import { css } from 'styled-components/macro';
-
+//CSS variables used for other styled components.
 const variables = css`
     :root {
         --black: #121212;

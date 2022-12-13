@@ -3,7 +3,11 @@ https://www.newline.co/courses/build-a-spotify-connected-app/welcome
 
 I mostly used this to play around with Spotify's API, and left out the playlist page in the tutorial
 because I could not ever see myself using it in a future project. Added an average popularity score
-to the profile page because that's what I'm leaning towards centering a future project on
+to the profile page because I'm leaning towards centering a future project on that.
+
+Not publishing to a live site until I figure out what direction exactly I want to go with this project
+AND I also have to manually add users to test the app - possible second semester project idea could be 
+to create something with this new API knowledge and new styling ideas. 
 
 IN ORDER TO RUN AFTER DOWNLOAD: 
 1. Go to https://developer.spotify.com/dashboard/login and sign in to spotify

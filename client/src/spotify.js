@@ -154,7 +154,14 @@ export const getTopArtists = (time_range = 'short_term') => {
 export const getTopTracks = (time_range = 'short_term') => {
     return axios.get(`/me/top/tracks?time_range=${time_range}`);
 };
-
+/**
+ * Takes an array of either artists or tracks, 
+ * and returns the popularity of each of those artists or tracks.
+ * DOES NOT USE SPOTIFY'S API LIKE OTHER FUNCTIONS HERE, 
+ * Just a spotify related function that would be significantly useful in future projects.
+ * @param {array} arr 
+ * @returns {array}
+ */
 export const getPopularity = (arr) =>{
     const retrievePop = (item) =>{
         return item.popularity;

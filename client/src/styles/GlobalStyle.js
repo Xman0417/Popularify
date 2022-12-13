@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components/macro';
 import variables from './variables';
-
+//Global stylesheet for the project - keeps consistency
 const GlobalStyle = createGlobalStyle`
     ${variables};
 

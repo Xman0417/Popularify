@@ -1,5 +1,7 @@
 import styled from 'styled-components/macro';
+//Login page component
 
+//Styled containers and login buttons
 const StyledLoginContainer = styled.main`
     display: flex;
     flex-direction: column;
@@ -24,6 +26,7 @@ const StyledLoginButton = styled.a`
     }
 `;
 
+//Actual login component
 const Login = () => (
     <StyledLoginContainer>
         <StyledLoginButton href="http://localhost:8888/login">

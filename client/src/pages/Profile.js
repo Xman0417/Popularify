@@ -47,7 +47,7 @@ const Profile = () => {
         avgTrackPop = avgPop(trackPopularity);
 
     }
-
+    //HTML that is returned when component is called
     return (
         <>
             {profile && (

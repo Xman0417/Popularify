@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { getTopTracks } from '../spotify';
 import { catchErrors } from '../utils';
 import { SectionWrapper, TrackList, TimeRangeButtons } from '../components';
-
+//Component for TopTracks, shown when a user clicks see more next to their top tracks on profile.
 const TopTracks = () => {
     const [topTracks, setTopTracks] = useState(null);
     const [activeRange, setActiveRange] = useState('short');
