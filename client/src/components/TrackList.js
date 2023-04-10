@@ -8,7 +8,7 @@ const TrackList = ({ tracks }) => (
             <StyledTrackList>
                 {tracks.map((track, i) => (
                     <li className="track__item" key={i}>
-                        <div className="track__item__num">{i + 1}</div>
+                        <div className="track__item__num">{track.popularity}</div>
                         <div className="track__item__title-group">
                             {track.album.images.length && track.album.images[2] && (
                                 <div className="track__item__img">

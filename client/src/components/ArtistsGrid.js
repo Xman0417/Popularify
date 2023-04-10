@@ -15,6 +15,7 @@ const ArtistsGrid = ({ artists }) => (
                             )}
                             <h3 className="grid__item__name overflow-ellipsis">{artist.name}</h3>
                             <p className="grid__item__label">Artist</p>
+                            <p className="grid__item__label">Popularity: {artist.popularity}</p>
                         </div>
                     </li>
                 ))}

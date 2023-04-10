@@ -136,23 +136,23 @@ axios.defaults.headers['Content-Type'] = 'application/json';
 export const getCurrentUserProfile = () => axios.get('/me');
 
 /**
- * Get a User's Top Artists and Tracks
+ * Get a User's Top Artists - goes up to the top 50, which is the max spotify allows through its API.
  * https://developer.spotify.com/documentation/web-api/reference/#endpoint-get-users-top-artists-and-tracks
  * @param {string} time_range - 'short_term' (last 4 weeks) 'medium_term' (last 6 months) or 'long_term' (all time). Defaults to 'short_term'
  * @returns {Promise}
  */
 export const getTopArtists = (time_range = 'short_term') => {
-    return axios.get(`/me/top/artists?time_range=${time_range}`);
+    return axios.get(`/me/top/artists?limit=50&time_range=${time_range}`);
 };
 
 /**
- * Get a User's Top Tracks
+ * Get a User's Top Tracks - goes up to the top 50, which is the max spotify allows through its API.
  * https://developer.spotify.com/documentation/web-api/reference/#endpoint-get-users-top-artists-and-tracks
  * @param {string} time_range - 'short_term' (last 4 weeks) 'medium_term' (last 6 months) or 'long_term' (calculated from several years of data and including all new data as it becomes available). Defaults to 'short_term'
  * @returns {Promise}
  */
 export const getTopTracks = (time_range = 'short_term') => {
-    return axios.get(`/me/top/tracks?time_range=${time_range}`);
+    return axios.get(`/me/top/tracks?limit=50&time_range=${time_range}`);
 };
 /**
  * Takes an array of either artists or tracks, 
