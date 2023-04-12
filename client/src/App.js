@@ -8,6 +8,7 @@ import {
 } from 'react-router-dom';
 import { GlobalStyle } from './styles';
 import { Login, Profile, TopArtists, TopTracks } from './pages';
+import { Navbar } from './components/';
 import styled from 'styled-components/macro';
 
 const StyledLogoutButton = styled.button`
@@ -44,7 +45,7 @@ function App() {
   useEffect(() => {
     setToken(accessToken);
   }, []);
-
+  //<StyledLogoutButton onClick={logout}>Log Out</StyledLogoutButton> - remove if this works
   return (
     <div className="App">
       <GlobalStyle />
@@ -53,8 +54,8 @@ function App() {
           <Login />
         ) : (
           <>
+            <Navbar />
             
-            <StyledLogoutButton onClick={logout}>Log Out</StyledLogoutButton>
             <Router>
               <ScrollToTop />
 
