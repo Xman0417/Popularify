@@ -4,6 +4,7 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 import PropTypes from 'prop-types';
+import { logout } from '../spotify';
 
 /*
  * This is a ready to use component, just import it and plop it into your project as:
@@ -100,7 +101,7 @@ class Navbar extends React.PureComponent {
       <Logo href="/">Popularify</Logo>
       <MainNav display={this.state.displayNav}>
           <NavLi>
-              <NavLink href="/" >Main</NavLink>
+              <NavLink href="/about" >About</NavLink>
           </NavLi>
           <NavLi>
               <NavLink href="/top-artists" >Top Artists</NavLink>
@@ -109,7 +110,7 @@ class Navbar extends React.PureComponent {
               <NavLink href="/top-tracks" >Top Tracks</NavLink>
           </NavLi>
           <NavLi>
-              <NavLink href="#" >Search</NavLink>
+              <NavLink onClick ={logout}>Logout</NavLink>
           </NavLi>
       </MainNav>
     </Bar>
