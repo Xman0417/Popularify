@@ -26,3 +26,14 @@ IN ORDER TO RUN AFTER DOWNLOAD:
 14. run "npm start"
 15. The app should be running!
 
+Popularify README:
+
+Popularify can be located here - insert link
+
+Because it is still in development mode, all users need to be approved. Contact me if you need to added to the list of approved users.
+
+Some of the things to do in the future if I decide I want to truly keep working on this app and push it live: 
+
+1. Add a Search for songs/artists
+2. Clean up the design at parts
+3. Request a quota extension from Spotify - which moves it out of development mode and allows any users to view the app.

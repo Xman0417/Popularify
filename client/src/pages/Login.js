@@ -25,14 +25,24 @@ const StyledLoginButton = styled.a`
         filter: brightness(1.1);
     }
 `;
+const StyledTitle = styled.h1`
+    
+    color: var(--green);
+    font-size:100px;
+    
+`;
 
 //Actual login component
 const Login = () => (
+    <>
+    
     <StyledLoginContainer>
+        <StyledTitle>Popularify for Spotify</StyledTitle>
         <StyledLoginButton href="http://localhost:8888/login">
             Log in to Spotify
         </StyledLoginButton>
     </StyledLoginContainer>
+    </>
 );
 
 export default Login;

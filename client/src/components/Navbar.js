@@ -9,11 +9,10 @@ import { logout } from '../spotify';
 /*
  * This is a ready to use component, just import it and plop it into your project as:
  * <Navbar/>
- * You might want to move all the style components into separate files for readability
- * if you plan to do more with it.
  */
 
-//background-image: linear-gradient(260deg,  rgb(42,244,152,255) 0%, #3498db 100%); 
+
+//Stylized Components
 
 const Bar = styled.nav`
   font-size: 18px;
