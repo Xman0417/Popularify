@@ -2,7 +2,8 @@ import { useState, useEffect } from 'react';
 import { getTopArtists } from '../spotify';
 import { catchErrors } from '../utils';
 import { ArtistsGrid, SectionWrapper, TimeRangeButtons } from '../components';
-//Component for TopArtists, shown when a user clicks see more next to their top artists on profile.
+//Component for TopArtists, shown when a user clicks see more next to their top artists on profile or
+//on the top artists section on the navbar.
 const TopArtists = () => {
     const [topArtists, setTopArtists] = useState(null);
     const [activeRange, setActiveRange] = useState('short');

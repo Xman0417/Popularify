@@ -1,4 +1,8 @@
+// Page for the About section. Mostly just an explanation of what Popularify is - could potentially
+// be moved to be viewable before the user logs in. 
+
 import styled from 'styled-components/macro';
+
 
 const StyledAbout = styled.div`
     display: flex;
