@@ -1,6 +1,5 @@
 const express = require('express');
 const app = express();
-const port = 8888;
 require('dotenv').config();
 const querystring = require('querystring');
 const axios = require('axios');
@@ -9,6 +8,8 @@ const axios = require('axios');
 const CLIENT_ID = process.env.CLIENT_ID;
 const CLIENT_SECRET = process.env.CLIENT_SECRET;
 const REDIRECT_URI = process.env.REDIRECT_URI;
+const FRONTEND_URI = process.env.FRONTEND_URI;
+const PORT = process.env.PORT || 8888;
 
 
 /**
@@ -84,7 +85,7 @@ app.get('/callback', (req, res) => {
                 expires_in,
             });
   
-            res.redirect(`http://localhost:3000/?${queryParams}`);
+            res.redirect(`${FRONTEND_URI}/?${queryParams}`);
   
         } else {
             //If a response is not successfully received from spotify, returns the error of invalid token
@@ -120,7 +121,7 @@ app.get('/refresh_token', (req, res) => {
     });
 });
 
-app.listen(port, () => {
-    console.log(`Express app listening at http://localhost:${port}`);
+app.listen(PORT, () => {
+    console.log(`Express app listening at http://localhost:${PORT}`);
 });
 

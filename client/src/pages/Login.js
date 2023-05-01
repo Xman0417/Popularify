@@ -32,13 +32,20 @@ const StyledTitle = styled.h1`
     
 `;
 
+//Mostly for readability - Essentially, if the app is in a developmental state, the login button will
+//redirect you to the login page at localhost. Otherwise, it'll redirect you to the actual login page.
+const LOGIN_URI =
+  process.env.NODE_ENV !== 'production'
+    ? 'http://localhost:8888/login'
+    : 'https://popularify.herokuapp.com/login';
+
 //Actual login component
 const Login = () => (
     <>
     
     <StyledLoginContainer>
         <StyledTitle>Popularify for Spotify</StyledTitle>
-        <StyledLoginButton href="http://localhost:8888/login">
+        <StyledLoginButton href={LOGIN_URI}>
             Log in to Spotify
         </StyledLoginButton>
     </StyledLoginContainer>
