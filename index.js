@@ -1,3 +1,7 @@
+const path = require('path');
+// Priority serve any static files.
+app.use(express.static(path.resolve(__dirname, './client/build')));
+
 const express = require('express');
 const app = express();
 require('dotenv').config();
@@ -119,6 +123,11 @@ app.get('/refresh_token', (req, res) => {
     .catch(error => {
         res.send(error);
     });
+});
+
+// All remaining requests return the React app, so it can handle routing.
+app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, './client/build', 'index.html'));
 });
 
 app.listen(PORT, () => {
