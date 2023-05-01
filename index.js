@@ -1,12 +1,9 @@
-const path = require('path');
-// Priority serve any static files.
-app.use(express.static(path.resolve(__dirname, './client/build')));
-
 const express = require('express');
 const app = express();
 require('dotenv').config();
 const querystring = require('querystring');
 const axios = require('axios');
+const path = require('path');
 
 //.env variables
 const CLIENT_ID = process.env.CLIENT_ID;
@@ -15,6 +12,8 @@ const REDIRECT_URI = process.env.REDIRECT_URI;
 const FRONTEND_URI = process.env.FRONTEND_URI;
 const PORT = process.env.PORT || 8888;
 
+// Priority serve any static files.
+app.use(express.static(path.resolve(__dirname, './client/build')));
 
 /**
  * Generates a random string containing numbers and letters
