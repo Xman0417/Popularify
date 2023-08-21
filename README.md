@@ -1,3 +1,6 @@
+UPDATE 8/21/23 - Popularify has been taken down since I don't feel like paying $7 a month to keep it running and I still haven't requested spotify for
+an extended user quota. 
+
 Popularify was initially created following this tutorial - has since become paywalled:
 https://www.newline.co/courses/build-a-spotify-connected-app/welcome
 
